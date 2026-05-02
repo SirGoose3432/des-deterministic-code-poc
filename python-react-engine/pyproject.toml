@@ -1,5 +1,5 @@
 [project]
-name = "python-ast-engine"
+name = "python-react-engine"
 version = "0.1.0"
 description = "Deterministic React TSX code generator driven by MCP component schemas"
 requires-python = ">=3.11"
@@ -16,4 +16,4 @@ testpaths = ["tests"]
 addopts = "-v"
 
 [tool.coverage.run]
-source = ["ast_engine"]
+source = ["react_engine"]

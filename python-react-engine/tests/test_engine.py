@@ -1,16 +1,16 @@
 """
-End-to-end tests for the Python AST engine.
+End-to-end tests for the Python React engine.
 
 Each test uses schema dicts that mirror the exact output produced by the
-get_component_ast_schema MCP tool so they validate the full pipeline.
+get_component_schema MCP tool so they validate the full pipeline.
 """
 from __future__ import annotations
 
 import pytest
 
-from ast_engine import generate
-from ast_engine.nodes import JsxElement, JsxProp, JsxText, JsxExpression
-from ast_engine.validator import ValidationError, SchemaError
+from react_engine import generate
+from react_engine.nodes import JsxElement, JsxProp, JsxText, JsxExpression
+from react_engine.validator import ValidationError, SchemaError
 
 
 # ---------------------------------------------------------------------------

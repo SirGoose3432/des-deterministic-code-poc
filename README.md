@@ -15,7 +15,7 @@ des-deterministic-code-poc/
 ├── apps/
 │   ├── mcp-orchestrator/       # MCP server (stdio transport)
 │   └── web-consumer/           # Sample React SPA
-└── python-ast-engine/          # Deterministic TSX generator (Python)
+└── python-react-engine/          # Deterministic TSX generator (Python)
 ```
 
 This is an [Nx 22.7](https://nx.dev) monorepo managed with Yarn workspaces.
@@ -117,7 +117,7 @@ Returns human-readable Markdown documentation for a component, derived from its 
 { "component": "Button" }
 ```
 
-#### `get_component_ast_schema`
+#### `get_component_schema`
 
 Returns a structured JSON schema describing a component's props — types, defaults, required/optional classification, and raw TypeScript type strings for inline enums.
 
@@ -147,16 +147,16 @@ This schema is the input contract for the Python AST engine.
 
 A Vite-powered React SPA that consumes the design system. Used to validate that the library builds and renders correctly in a real application context.
 
-### `python-ast-engine`
+### `python-react-engine`
 
-A pure-Python (stdlib only, no runtime dependencies) engine that takes a component schema from `get_component_ast_schema` and a props dict, and returns deterministic, formatted TSX.
+A pure-Python (stdlib only, no runtime dependencies) engine that takes a component schema from `get_component_schema` and a props dict, and returns deterministic, formatted TSX.
 
-See [python-ast-engine/README.md](python-ast-engine/README.md) for full documentation.
+See [python-react-engine/README.md](python-react-engine/README.md) for full documentation.
 
 **Quick usage:**
 
 ```bash
-cd python-ast-engine
+cd python-react-engine
 
 # JSX snippet
 python generate.py \
@@ -196,10 +196,10 @@ Design system source (*.tsx)
         │
         ▼
   mcp-orchestrator
-  get_component_ast_schema
+  get_component_schema
         │  JSON schema
         ▼
-  python-ast-engine
+  python-react-engine
   generate(schema, props)
         │  TSX string
         ▼

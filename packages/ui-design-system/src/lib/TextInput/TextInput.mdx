@@ -1,0 +1,69 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as TextInputStories from './TextInput.stories';
+
+<Meta of={TextInputStories} />
+
+<Title />
+
+`TextInput` is a controlled form field with a visible label, optional hint text, and inline validation error display. It is fully accessible: the label is wired via `htmlFor`, errors use `role="alert"`, and the input carries `aria-invalid` and `aria-describedby` when appropriate.
+
+## Usage
+
+```tsx
+import { TextInput } from 'ui-design-system';
+
+const [value, setValue] = useState('');
+
+<TextInput
+  id="email"
+  label="Email address"
+  value={value}
+  onChange={setValue}
+  type="email"
+  placeholder="you@example.com"
+/>
+```
+
+> `TextInput` is a **controlled component** — you must supply both `value` and `onChange`.
+
+## Props
+
+<ArgTypes of={TextInputStories} />
+
+## Stories
+
+### Default
+
+A basic text field with a label and placeholder.
+
+<Canvas of={TextInputStories.Default} />
+
+### With hint
+
+Supplemental guidance rendered below the input when there is no error.
+
+<Canvas of={TextInputStories.WithHint} />
+
+### With error
+
+The border turns red, an error message appears with `role="alert"`, and `aria-invalid` is set on the input.
+
+<Canvas of={TextInputStories.WithError} />
+
+### Required
+
+Appends an asterisk to the label and sets the native `required` attribute.
+
+<Canvas of={TextInputStories.Required} />
+
+### Disabled
+
+Prevents all interaction. The field and label are visually dimmed.
+
+<Canvas of={TextInputStories.Disabled} />
+
+### Read-only
+
+The value is visible but not editable. Use for display-only fields like API keys or account numbers.
+
+<Canvas of={TextInputStories.ReadOnly} />

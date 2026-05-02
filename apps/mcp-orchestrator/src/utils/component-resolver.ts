@@ -1,9 +1,20 @@
 import path from 'path';
 import fs from 'fs';
 
-// When built, __dirname = dist/apps/mcp-orchestrator → 3 levels up = workspace root.
-// When running via `nx serve`, cwd is workspace root; __dirname is still the dist location.
-export const WORKSPACE_ROOT = path.resolve(__dirname, '..', '..', '..');
+// Locate the workspace root by walking up from __dirname until we find nx.json.
+// This handles both the compiled bundle (__dirname = dist/apps/mcp-orchestrator)
+// and ts-jest test execution (__dirname = apps/mcp-orchestrator/src/utils).
+function findWorkspaceRoot(): string {
+  let dir = __dirname;
+  while (dir !== path.dirname(dir)) {
+    if (fs.existsSync(path.join(dir, 'nx.json'))) return dir;
+    dir = path.dirname(dir);
+  }
+  // Last resort: cwd is the workspace root when nx runs tests.
+  return process.cwd();
+}
+
+export const WORKSPACE_ROOT = findWorkspaceRoot();
 
 export const DESIGN_SYSTEM_TSCONFIG = path.join(
   WORKSPACE_ROOT,
@@ -21,6 +32,7 @@ export const AVAILABLE_COMPONENTS = Object.keys(COMPONENT_MAP);
 export interface ResolvedComponent {
   componentPath: string;
   storiesPath: string | null;
+  mdxPath: string | null;
 }
 
 export function resolveComponent(name: string): ResolvedComponent {
@@ -37,8 +49,10 @@ export function resolveComponent(name: string): ResolvedComponent {
   }
 
   const storiesPath = componentPath.replace('.tsx', '.stories.tsx');
+  const mdxPath = componentPath.replace('.tsx', '.mdx');
   return {
     componentPath,
     storiesPath: fs.existsSync(storiesPath) ? storiesPath : null,
+    mdxPath: fs.existsSync(mdxPath) ? mdxPath : null,
   };
 }

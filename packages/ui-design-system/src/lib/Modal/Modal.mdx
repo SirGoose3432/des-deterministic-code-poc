@@ -1,0 +1,69 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+<Title />
+
+`Modal` is a portal-based overlay panel. It renders into `document.body` via `createPortal`, locks body scroll while open, traps focus in the panel, and dismisses on Escape key or backdrop click.
+
+## Usage
+
+```tsx
+import { Modal } from 'ui-design-system';
+
+const [open, setOpen] = useState(false);
+
+<Modal
+  isOpen={open}
+  onClose={() => setOpen(false)}
+  title="Confirm action"
+>
+  Are you sure you want to proceed? This action cannot be undone.
+</Modal>
+```
+
+## Accessibility
+
+- The panel carries `role="dialog"` and `aria-modal="true"`.
+- The title is linked via `aria-labelledby`.
+- Focus moves into the panel on open via `tabIndex={-1}` and `.focus()`.
+- Pressing **Escape** always calls `onClose`, regardless of the `closeOnBackdropClick` setting.
+
+## Props
+
+<ArgTypes of={ModalStories} />
+
+## Stories
+
+Each story renders an **Open modal** trigger button. Click it to see the modal in context.
+
+### Default
+
+Standard confirmation dialog — medium width, backdrop dismiss enabled, close button visible.
+
+<Canvas of={ModalStories.Default} />
+
+### Small
+
+Compact panel for short messages or single-action confirmations.
+
+<Canvas of={ModalStories.Small} />
+
+### Large
+
+Wide panel for longer content such as terms, previews, or multi-step flows.
+
+<Canvas of={ModalStories.Large} />
+
+### No backdrop close
+
+The modal can only be dismissed via the close button or Escape key. Use when the user must make an explicit choice.
+
+<Canvas of={ModalStories.NoBackdropClose} />
+
+### No close button
+
+Removes the × button entirely. Combine with `closeOnBackdropClick={false}` to create a blocking modal that only resolves programmatically.
+
+<Canvas of={ModalStories.NoCloseButton} />

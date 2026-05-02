@@ -1,0 +1,69 @@
+import { Meta, Title, Description, ArgTypes, Canvas, Story } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+<Title />
+
+`Button` is the base action primitive for the design system. It supports four visual variants, three sizes, loading and disabled states, and full-width layout.
+
+## Usage
+
+```tsx
+import { Button } from 'ui-design-system';
+
+<Button label="Save changes" variant="primary" onClick={handleSave} />
+```
+
+## Props
+
+<ArgTypes of={ButtonStories} />
+
+## Stories
+
+### Primary
+
+The default variant for primary actions.
+
+<Canvas of={ButtonStories.Primary} />
+
+### Secondary
+
+Use for secondary or less prominent actions alongside a primary button.
+
+<Canvas of={ButtonStories.Secondary} />
+
+### Ghost
+
+Minimal treatment — use in toolbars or where visual weight should be low.
+
+<Canvas of={ButtonStories.Ghost} />
+
+### Danger
+
+Communicates a destructive action. Use for delete, remove, or irreversible operations.
+
+<Canvas of={ButtonStories.Danger} />
+
+### Sizes
+
+<Canvas of={ButtonStories.Small} />
+<Canvas of={ButtonStories.Large} />
+
+### Loading
+
+Renders a spinner and blocks interaction while an async action is in-flight. The `label` remains visible for layout stability.
+
+<Canvas of={ButtonStories.Loading} />
+
+### Disabled
+
+Dims the button and prevents all interaction.
+
+<Canvas of={ButtonStories.Disabled} />
+
+### Full width
+
+Stretches to fill its container. Useful inside form footers or mobile-width layouts.
+
+<Canvas of={ButtonStories.FullWidth} />

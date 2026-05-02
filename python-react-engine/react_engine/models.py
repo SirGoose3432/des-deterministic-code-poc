@@ -1,6 +1,6 @@
 """
-Dataclass representations of the ComponentAstSchema returned by the
-get_component_ast_schema MCP tool.
+Dataclass representations of the ComponentSchema returned by the
+get_component_schema MCP tool.
 """
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ class PropDefinition:
 
 @dataclass(frozen=True)
 class ComponentSchema:
-    """Full component schema as returned by get_component_ast_schema."""
+    """Full component schema as returned by get_component_schema."""
 
     component: str
     displayName: str

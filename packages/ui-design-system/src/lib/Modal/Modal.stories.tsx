@@ -6,7 +6,6 @@ import { Button } from '../Button/Button';
 const meta: Meta<typeof Modal> = {
   title: 'Design System/Modal',
   component: Modal,
-  tags: ['autodocs'],
   parameters: { layout: 'centered' },
   argTypes: {
     size:    { control: 'select', options: ['sm', 'md', 'lg'] },

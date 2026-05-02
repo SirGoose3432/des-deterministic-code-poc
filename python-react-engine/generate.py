@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI entry point for the Python AST engine.
+CLI entry point for the Python React engine.
 
 Usage
 -----
@@ -26,8 +26,8 @@ import json
 import sys
 from pathlib import Path
 
-from ast_engine import generate
-from ast_engine.validator import ValidationError, SchemaError
+from react_engine import generate
+from react_engine.validator import ValidationError, SchemaError
 
 
 def _load_json(value: str) -> dict:

@@ -5,7 +5,6 @@ import { TextInput } from './TextInput';
 const meta: Meta<typeof TextInput> = {
   title: 'Design System/TextInput',
   component: TextInput,
-  tags: ['autodocs'],
   parameters: { layout: 'centered' },
   argTypes: {
     type:     { control: 'select', options: ['text', 'email', 'password', 'number', 'tel', 'url', 'search'] },

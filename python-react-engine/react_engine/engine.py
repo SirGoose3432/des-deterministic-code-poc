@@ -47,7 +47,7 @@ def generate(
     Parameters
     ----------
     schema_dict:
-        Raw dict as returned by the ``get_component_ast_schema`` MCP tool.
+        Raw dict as returned by the ``get_component_schema`` MCP tool.
     props:
         Desired props to apply.  ``None`` values are silently dropped so
         callers can pass the full optional-props dict with nulls.

@@ -1,5 +1,6 @@
 import * as docgen from 'react-docgen-typescript';
 import { resolveComponent, DESIGN_SYSTEM_TSCONFIG } from '../utils/component-resolver';
+import { PropSchema, ComponentSchema } from '../utils/types';
 
 const parser = docgen.withCustomConfig(DESIGN_SYSTEM_TSCONFIG, {
   shouldExtractLiteralValuesFromEnum: true,
@@ -8,25 +9,7 @@ const parser = docgen.withCustomConfig(DESIGN_SYSTEM_TSCONFIG, {
     prop.parent == null || !prop.parent.fileName.includes('node_modules'),
 });
 
-export interface PropSchema {
-  type: string;
-  rawType?: string;
-  required: boolean;
-  defaultValue: string | null;
-  description: string;
-}
-
-export interface ComponentAstSchema {
-  component: string;
-  displayName: string;
-  description: string;
-  filePath: string;
-  props: Record<string, PropSchema>;
-  requiredProps: string[];
-  optionalProps: string[];
-}
-
-export function getComponentAstSchema(componentName: string): ComponentAstSchema {
+export function getComponentSchema(componentName: string): ComponentSchema {
   const { componentPath } = resolveComponent(componentName);
 
   const docs = parser.parse(componentPath);
