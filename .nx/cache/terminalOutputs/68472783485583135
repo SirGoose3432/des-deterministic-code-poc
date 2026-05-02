@@ -1,9 +1,0 @@
-[ [32mwatch[39m ] build succeeded, watching for changes...
-[1m[31mDebugger listening on ws://localhost:9229/d4ec449c-1ccd-41d3-8354-553ca233a2b2
-Debugger listening on ws://localhost:9229/d4ec449c-1ccd-41d3-8354-553ca233a2b2
-For help, see: https://nodejs.org/en/docs/inspector
-[39m[22m
-Hello World
-
-[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 0, waiting for changes to restart...[22m
-

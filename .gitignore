@@ -1,7 +1,8 @@
-.nx/polygraph
+.nx/
 .claude/worktrees
 .claude/settings.local.json
-.vscode
+.vscode/
+!.vscode/mcp.json
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
 
