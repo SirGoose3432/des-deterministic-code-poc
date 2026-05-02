@@ -9,5 +9,11 @@
   },
   "enabledPlugins": {
     "nx@nx-claude-plugins": true
+  },
+  "mcpServers": {
+    "design-system": {
+      "command": "node",
+      "args": ["./dist/apps/mcp-orchestrator/main.js"]
+    }
   }
 }
