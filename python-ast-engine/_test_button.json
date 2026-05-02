@@ -1,0 +1,18 @@
+{
+  "component": "Button",
+  "displayName": "Button",
+  "description": "",
+  "filePath": "/fake/Button.tsx",
+  "props": {
+    "label":     {"type": "string",  "required": true,  "defaultValue": null,     "description": "The visible text label rendered inside the button."},
+    "variant":   {"type": "enum",    "required": false, "defaultValue": "primary", "description": "Visual style variant.", "rawType": "ButtonVariant"},
+    "size":      {"type": "enum",    "required": false, "defaultValue": "md",      "description": "Controls padding and font-size.", "rawType": "ButtonSize"},
+    "disabled":  {"type": "boolean", "required": false, "defaultValue": false,     "description": "Disables interaction."},
+    "loading":   {"type": "boolean", "required": false, "defaultValue": false,     "description": "Shows a loading spinner."},
+    "fullWidth": {"type": "boolean", "required": false, "defaultValue": false,     "description": "Stretches to fill container."},
+    "type":      {"type": "enum",    "required": false, "defaultValue": "button",  "description": "HTML button type.", "rawType": "\"button\" | \"submit\" | \"reset\""},
+    "onClick":   {"type": "MouseEventHandler<HTMLButtonElement>", "required": false, "defaultValue": null, "description": "Click handler."}
+  },
+  "requiredProps": ["label"],
+  "optionalProps": ["variant", "size", "disabled", "loading", "fullWidth", "type", "onClick"]
+}

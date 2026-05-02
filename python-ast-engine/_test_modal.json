@@ -1,0 +1,17 @@
+{
+  "component": "Modal",
+  "displayName": "Modal",
+  "description": "",
+  "filePath": "/fake/Modal.tsx",
+  "props": {
+    "isOpen":               {"type": "boolean",    "required": true,  "defaultValue": null,  "description": "Whether visible."},
+    "onClose":              {"type": "() => void", "required": true,  "defaultValue": null,  "description": "Close callback."},
+    "title":                {"type": "string",     "required": true,  "defaultValue": null,  "description": "Header title."},
+    "children":             {"type": "ReactNode",  "required": true,  "defaultValue": null,  "description": "Body content."},
+    "size":                 {"type": "enum",       "required": false, "defaultValue": "md",  "description": "Panel width.", "rawType": "ModalSize"},
+    "closeOnBackdropClick": {"type": "boolean",    "required": false, "defaultValue": true,  "description": "Backdrop dismiss."},
+    "showCloseButton":      {"type": "boolean",    "required": false, "defaultValue": true,  "description": "Show x button."}
+  },
+  "requiredProps": ["isOpen", "onClose", "title", "children"],
+  "optionalProps": ["size", "closeOnBackdropClick", "showCloseButton"]
+}
