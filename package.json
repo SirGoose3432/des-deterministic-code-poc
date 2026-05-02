@@ -19,7 +19,9 @@
     "test": "nx run-many --target=test --all",
     "lint": "nx run-many --target=lint --all",
     "affected:build": "nx affected:build",
-    "affected:test": "nx affected:test"
+    "affected:test": "nx affected:test",
+    "inspect:mcp": "node scripts/inspect-mcp.js",
+    "inspect:mcp:local": "npx @modelcontextprotocol/inspector node e:/dev/des-deterministic-code-poc/dist/apps/mcp-orchestrator/main.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
