@@ -1,0 +1,57 @@
+[2m> [22mstorybook build
+
+
+[90m┌[39m  Building storybook v10.3.6
+[90m│[39m
+[32m◇[39m  Cleaning outputDir: [36mstorybook-static[39m
+[90m│[39m
+[32m◇[39m  Loading presets
+[90m│[39m
+[32m◇[39m  Building manager..
+[90m│[39m
+[34m●[39m  Building preview..
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [vite:dts] You are building a library that may not need to generate
+[90m│[39m  declaration files.
+
+[90m│[39m  [43mVite[49m [36mvite v8.0.10 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...[32m✓[39m 40 modules transformed.
+rendering chunks...
+[90m│[39m  [43mVite[49m
+[90m│[39m  [vite:dts] Start generate declaration files...
+[90m│[39m  [43mVite[49m [vite:dts] Declaration files built in 731ms.
+
+computing gzip size...
+[90m│[39m  [43mVite[49m [2mstorybook-static/[0m[32miframe.html[39m[2m[1m[22m
+[90m│[39m  [1m18.82 kB[0m[0m[2m │ gzip:   5.26 kB[0m
+[90m│[39m  [2mstorybook-static/[0m[2massets/[0m[35mui-design-system-x1XGuNl0.css         [39m[2m[1m    0.00[22m
+[90m│[39m  [1mkB[0m[0m[2m │ gzip:   0.02 kB[0m
+[90m│[39m  [2mstorybook-static/[0m[2massets/[0m[36mui-design-system.stories-NzsyDdJR.js  [39m[2m[1m    0.89[22m
+[90m│[39m  [1mkB[0m[0m[2m │ gzip:   0.55 kB[0m
+[90m│[39m  [2mstorybook-static/[0m[2massets/[0m[36mchunk-DnJy8xQt.js                     [39m[2m[1m    1.12[22m
+[90m│[39m  [1mkB[0m[0m[2m │ gzip:   0.63 kB[0m
+[90m│[39m  [2mstorybook-static/[0m[2massets/[0m[36mpreload-helper-DVWkohm0.js            [39m[2m[1m    1.27[22m
+[90m│[39m  [1mkB[0m[0m[2m │ gzip:   0.74 kB[0m
+[90m│[39m  [2mstorybook-static/[0m[36mvite-inject-mocker-entry.js                  [39m[2m[1m   27.85[22m
+[90m│[39m  [1mkB[0m[0m[2m │ gzip:   9.64 kB[0m
+[90m│[39m  [2mstorybook-static/[0m[2massets/[0m[36mreact-18-CNP2sMR5.js                  [39m[2m[1m  182.50[22m
+[90m│[39m  [1mkB[0m[0m[2m │ gzip:  57.50 kB[0m
+[90m│[39m  [2mstorybook-static/[0m[2massets/[0m[36miframe-Df5mlPd2.js                    [39m[33m[1m1,068.05[22m
+[90m│[39m  [1mkB[0m[39m[2m │ gzip: 299.84 kB[0m
+
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[plugin builtin:vite-reporter][33m[1m
+[90m│[39m  (!) Some chunks are larger than 500 kB after minification. Consider:
+[90m│[39m  - Using dynamic import() to code-split the application
+[90m│[39m  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+[90m│[39m  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+[90m│[39m  - Adjust chunk size limit for this warning via
+[90m│[39m  build.chunkSizeWarningLimit.[0m[33m[39m
+[90m│[39m  [43mVite[49m [32m✓ built in 1.55s[39m
+[90m│[39m
+[32m◇[39m  Output directory:
+[90m│[39m  E:/dev/des-deterministic-code-poc/packages/ui-design-system/storybook-static
+[90m│[39m
+[90m└[39m  Storybook build completed successfully
+

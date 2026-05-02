@@ -1,0 +1,4 @@
+[31m[1merror[22m[39m [90mTS5095[39m: Option 'bundler' can only be used when 'module' is set to 'preserve' or to 'es2015' or later.
+
+
+Found 1 error.

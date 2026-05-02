@@ -1,0 +1,9 @@
+{
+  "name": "web-consumer",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web-consumer/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project web-consumer --web",
+  "targets": {}
+}
