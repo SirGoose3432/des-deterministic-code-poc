@@ -30,12 +30,12 @@ describe('getStorybookDocs', () => {
       expect(docs).toContain('```tsx');
     });
 
-    it('contains story source for Primary', () => {
-      expect(docs).toContain("export const Primary: Story =");
+    it('renders Primary story as JSX', () => {
+      expect(docs).toContain('<Button label="Primary button"');
     });
 
-    it('contains story source for Disabled', () => {
-      expect(docs).toContain("export const Disabled: Story =");
+    it('renders Disabled story as JSX with boolean shorthand', () => {
+      expect(docs).toContain('<Button label="Not available" disabled />');
     });
 
     it('includes MDX prose descriptions', () => {

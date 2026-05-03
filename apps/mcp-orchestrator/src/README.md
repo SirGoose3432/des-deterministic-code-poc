@@ -28,6 +28,23 @@ Output
 />
 ```
 
+ComponentMode Output
+```string
+import { Button } from 'ui-design-system';
+
+export default function MyButtonComponent(): JSX.Element {
+  return (
+    <Button
+      label="Save changes"
+      variant="primary"
+      size="md"
+      loading={false}
+      onClick={handleSave}
+    />
+  );
+}
+```
+
 Minimal Example
 ```json
 {
