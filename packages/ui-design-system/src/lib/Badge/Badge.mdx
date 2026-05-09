@@ -1,0 +1,39 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as BadgeStories from './Badge.stories';
+
+<Meta of={BadgeStories} />
+
+<Title />
+
+`Badge` is a compact label used to convey status, category, or count. Six semantic variants and an optional dot indicator are available.
+
+## Usage
+
+```tsx
+import { Badge } from 'ui-design-system';
+
+<Badge label="Active" variant="success" dot />
+```
+
+## Props
+
+<ArgTypes of={BadgeStories} />
+
+## Stories
+
+### Variants
+
+<Canvas of={BadgeStories.Default} />
+<Canvas of={BadgeStories.Primary} />
+<Canvas of={BadgeStories.Success} />
+<Canvas of={BadgeStories.Warning} />
+<Canvas of={BadgeStories.Error} />
+<Canvas of={BadgeStories.Info} />
+
+### Small
+
+<Canvas of={BadgeStories.Small} />
+
+### With dot
+
+<Canvas of={BadgeStories.WithDot} />

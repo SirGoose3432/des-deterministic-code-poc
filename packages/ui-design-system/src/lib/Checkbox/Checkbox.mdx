@@ -1,0 +1,53 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as CheckboxStories from './Checkbox.stories';
+
+<Meta of={CheckboxStories} />
+
+<Title />
+
+`Checkbox` is a controlled boolean input with a visible label, optional hint, error state, and indeterminate support.
+
+## Usage
+
+```tsx
+import { Checkbox } from 'ui-design-system';
+
+<Checkbox
+  id="terms"
+  label="I agree to the terms"
+  checked={accepted}
+  onChange={(e) => setAccepted(e.target.checked)}
+/>
+```
+
+## Props
+
+<ArgTypes of={CheckboxStories} />
+
+## Stories
+
+### Default
+
+<Canvas of={CheckboxStories.Default} />
+
+### Checked
+
+<Canvas of={CheckboxStories.Checked} />
+
+### With hint
+
+<Canvas of={CheckboxStories.WithHint} />
+
+### With error
+
+<Canvas of={CheckboxStories.WithError} />
+
+### Disabled
+
+<Canvas of={CheckboxStories.Disabled} />
+
+### Indeterminate
+
+Used for "select all" controls where only some children are selected.
+
+<Canvas of={CheckboxStories.Indeterminate} />

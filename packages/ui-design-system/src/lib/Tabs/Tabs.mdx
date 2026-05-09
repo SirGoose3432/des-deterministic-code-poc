@@ -1,0 +1,37 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as TabsStories from './Tabs.stories';
+
+<Meta of={TabsStories} />
+
+<Title />
+
+`Tabs` renders a horizontal tab bar with `role="tablist"` semantics. It is a controlled component — you manage the active tab in state and wire it via `activeTab` and `onChange`. Pair it with conditionally rendered content panels for a full tab interface.
+
+## Usage
+
+```tsx
+import { Tabs } from 'ui-design-system';
+
+<Tabs
+  tabs={[
+    { id: 'overview', label: 'Overview' },
+    { id: 'settings', label: 'Settings' },
+  ]}
+  activeTab={activeTab}
+  onChange={setActiveTab}
+/>
+```
+
+## Props
+
+<ArgTypes of={TabsStories} />
+
+## Stories
+
+### Default
+
+<Canvas of={TabsStories.Default} />
+
+### Small
+
+<Canvas of={TabsStories.Small} />

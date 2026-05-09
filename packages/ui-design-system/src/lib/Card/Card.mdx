@@ -1,0 +1,46 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+<Title />
+
+`Card` is the standard content container. It provides a white surface with a border, optional header title, configurable padding, and shadow elevation.
+
+## Usage
+
+```tsx
+import { Card } from 'ui-design-system';
+
+<Card title="User profile" padding="md" elevation="sm">
+  Content goes here.
+</Card>
+```
+
+## Props
+
+<ArgTypes of={CardStories} />
+
+## Stories
+
+### Default
+
+<Canvas of={CardStories.Default} />
+
+### With title
+
+<Canvas of={CardStories.WithTitle} />
+
+### Elevation
+
+<Canvas of={CardStories.ElevationMedium} />
+<Canvas of={CardStories.ElevationNone} />
+
+### Padding
+
+<Canvas of={CardStories.PaddingSmall} />
+<Canvas of={CardStories.PaddingLarge} />
+
+### Full width
+
+<Canvas of={CardStories.FullWidth} />

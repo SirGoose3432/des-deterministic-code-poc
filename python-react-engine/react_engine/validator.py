@@ -133,14 +133,14 @@ def _check_single(name: str, value: Any, defn: PropDefinition) -> None:
                     prop=name,
                 )
 
-    # Function, ReactNode, and other complex types accept any string expression
-    # (the caller supplies a TS expression like "handleClick" or "() => {}").
-    elif isinstance(value, str):
+    # Function, ReactNode, array, object, and other complex types — accept a
+    # string JS expression, or a native list/dict (JSON-serialized by builder).
+    elif isinstance(value, (str, list, dict)):
         pass  # accepted
 
     else:
         raise ValidationError(
             f"Prop '{name}' has schema type '{t}'. "
-            f"Supply a string expression for complex/function types.",
+            f"Supply a string expression or a JSON-serialisable list/dict.",
             prop=name,
         )

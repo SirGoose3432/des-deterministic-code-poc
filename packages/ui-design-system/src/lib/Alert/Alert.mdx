@@ -1,0 +1,44 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as AlertStories from './Alert.stories';
+
+<Meta of={AlertStories} />
+
+<Title />
+
+`Alert` surfaces contextual feedback to the user. It supports four semantic variants — info, success, warning, and error — each with distinct colour and icon treatment. Alerts can optionally include a title and a dismiss button.
+
+## Usage
+
+```tsx
+import { Alert } from 'ui-design-system';
+
+<Alert variant="success" title="Saved">
+  Your changes have been saved.
+</Alert>
+```
+
+## Props
+
+<ArgTypes of={AlertStories} />
+
+## Stories
+
+### Info
+
+<Canvas of={AlertStories.Info} />
+
+### Success
+
+<Canvas of={AlertStories.Success} />
+
+### Warning
+
+<Canvas of={AlertStories.Warning} />
+
+### Error
+
+<Canvas of={AlertStories.Error} />
+
+### Dismissible
+
+<Canvas of={AlertStories.Dismissible} />

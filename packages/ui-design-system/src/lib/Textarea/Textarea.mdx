@@ -1,0 +1,49 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as TextareaStories from './Textarea.stories';
+
+<Meta of={TextareaStories} />
+
+<Title />
+
+`Textarea` is a controlled multiline text input with a label, optional character counter, error state, and configurable resize behaviour.
+
+## Usage
+
+```tsx
+import { Textarea } from 'ui-design-system';
+
+<Textarea
+  id="bio"
+  label="Bio"
+  value={bio}
+  onChange={setBio}
+  placeholder="Tell us about yourself…"
+  maxLength={500}
+/>
+```
+
+## Props
+
+<ArgTypes of={TextareaStories} />
+
+## Stories
+
+### Default
+
+<Canvas of={TextareaStories.Default} />
+
+### With hint
+
+<Canvas of={TextareaStories.WithHint} />
+
+### With error
+
+<Canvas of={TextareaStories.WithError} />
+
+### Character count
+
+<Canvas of={TextareaStories.WithCharacterCount} />
+
+### Disabled
+
+<Canvas of={TextareaStories.Disabled} />

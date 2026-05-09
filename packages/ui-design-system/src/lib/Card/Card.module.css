@@ -1,0 +1,48 @@
+.card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* --- padding --- */
+
+.padding-none .body { padding: 0; }
+.padding-sm  .body { padding: 0.75rem; }
+.padding-md  .body { padding: 1.25rem; }
+.padding-lg  .body { padding: 2rem; }
+
+/* --- elevation --- */
+
+.elevation-none { box-shadow: none; }
+.elevation-sm   { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
+.elevation-md   { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
+
+/* --- header / title --- */
+
+.header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.padding-sm  .header { padding: 0.625rem 0.75rem; }
+.padding-lg  .header { padding: 1.25rem 2rem; }
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.body {
+  color: #374151;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}

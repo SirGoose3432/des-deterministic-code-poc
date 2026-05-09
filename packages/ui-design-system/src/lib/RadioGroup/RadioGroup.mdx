@@ -1,0 +1,47 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as RadioGroupStories from './RadioGroup.stories';
+
+<Meta of={RadioGroupStories} />
+
+<Title />
+
+`RadioGroup` is a controlled group of radio inputs wrapped in a `<fieldset>` for accessibility. Supports vertical and horizontal layouts, error state, and per-option disabled flags.
+
+## Usage
+
+```tsx
+import { RadioGroup } from 'ui-design-system';
+
+<RadioGroup
+  name="plan"
+  legend="Billing plan"
+  value={plan}
+  onChange={setPlan}
+  options={[
+    { value: 'free', label: 'Free' },
+    { value: 'pro',  label: 'Pro' },
+  ]}
+/>
+```
+
+## Props
+
+<ArgTypes of={RadioGroupStories} />
+
+## Stories
+
+### Vertical
+
+<Canvas of={RadioGroupStories.Vertical} />
+
+### Horizontal
+
+<Canvas of={RadioGroupStories.Horizontal} />
+
+### With error
+
+<Canvas of={RadioGroupStories.WithError} />
+
+### Disabled
+
+<Canvas of={RadioGroupStories.Disabled} />

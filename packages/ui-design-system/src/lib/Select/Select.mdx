@@ -1,0 +1,48 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+<Title />
+
+`Select` is a controlled dropdown field with a label, placeholder, error, and hint. It wraps a native `<select>` for accessibility and keyboard navigation.
+
+## Usage
+
+```tsx
+import { Select } from 'ui-design-system';
+
+<Select
+  id="department"
+  label="Department"
+  value={value}
+  onChange={(e) => setValue(e.target.value)}
+  options={[
+    { value: 'design', label: 'Design' },
+    { value: 'engineering', label: 'Engineering' },
+  ]}
+  placeholder="Select a department…"
+/>
+```
+
+## Props
+
+<ArgTypes of={SelectStories} />
+
+## Stories
+
+### Default
+
+<Canvas of={SelectStories.Default} />
+
+### With hint
+
+<Canvas of={SelectStories.WithHint} />
+
+### With error
+
+<Canvas of={SelectStories.WithError} />
+
+### Disabled
+
+<Canvas of={SelectStories.Disabled} />

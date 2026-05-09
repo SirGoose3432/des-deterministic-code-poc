@@ -9,6 +9,7 @@ The builder is responsible for:
 """
 from __future__ import annotations
 
+import json
 from typing import Any, Union
 
 from .models import ComponentSchema, PropDefinition
@@ -106,6 +107,10 @@ def _coerce(value: Any, defn: PropDefinition) -> PropValue:
     # ReactNode and other complex types — wrap as expression if not already str.
     if isinstance(value, str):
         return JsxExpression(content=value)
+
+    # Native list/dict — JSON-serialize so the caller can pass arrays naturally.
+    if isinstance(value, (list, dict)):
+        return JsxExpression(content=json.dumps(value, ensure_ascii=False))
 
     # Fallback — coerce to string expression.
     return JsxExpression(content=str(value))

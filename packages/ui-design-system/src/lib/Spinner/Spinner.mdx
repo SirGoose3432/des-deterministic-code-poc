@@ -1,0 +1,35 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as SpinnerStories from './Spinner.stories';
+
+<Meta of={SpinnerStories} />
+
+<Title />
+
+`Spinner` is a standalone loading indicator with three sizes and an accessible `role="status"` label. Use it for async states that aren't tied to a specific button (prefer the `loading` prop on `Button` when the async action is button-triggered).
+
+## Usage
+
+```tsx
+import { Spinner } from 'ui-design-system';
+
+<Spinner size="md" label="Loading data…" />
+```
+
+## Props
+
+<ArgTypes of={SpinnerStories} />
+
+## Stories
+
+### Default
+
+<Canvas of={SpinnerStories.Default} />
+
+### Sizes
+
+<Canvas of={SpinnerStories.Small} />
+<Canvas of={SpinnerStories.Large} />
+
+### Custom label
+
+<Canvas of={SpinnerStories.CustomLabel} />

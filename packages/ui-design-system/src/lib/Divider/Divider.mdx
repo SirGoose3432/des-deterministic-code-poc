@@ -1,0 +1,36 @@
+import { Meta, Title, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as DividerStories from './Divider.stories';
+
+<Meta of={DividerStories} />
+
+<Title />
+
+`Divider` is a visual separator between sections of content. It supports horizontal and vertical orientations, variable spacing, and an optional centred label.
+
+## Usage
+
+```tsx
+import { Divider } from 'ui-design-system';
+
+<Divider />
+<Divider label="or" spacing="lg" />
+```
+
+## Props
+
+<ArgTypes of={DividerStories} />
+
+## Stories
+
+### Horizontal
+
+<Canvas of={DividerStories.Horizontal} />
+
+### With label
+
+<Canvas of={DividerStories.WithLabel} />
+
+### Spacing
+
+<Canvas of={DividerStories.SpacingSmall} />
+<Canvas of={DividerStories.SpacingLarge} />

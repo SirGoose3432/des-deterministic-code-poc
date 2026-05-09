@@ -22,9 +22,20 @@ export const DESIGN_SYSTEM_TSCONFIG = path.join(
 );
 
 const COMPONENT_MAP: Record<string, string> = {
-  Button:    'packages/ui-design-system/src/lib/Button/Button.tsx',
-  TextInput: 'packages/ui-design-system/src/lib/TextInput/TextInput.tsx',
-  Modal:     'packages/ui-design-system/src/lib/Modal/Modal.tsx',
+  Button:      'packages/ui-design-system/src/lib/Button/Button.tsx',
+  TextInput:   'packages/ui-design-system/src/lib/TextInput/TextInput.tsx',
+  Modal:       'packages/ui-design-system/src/lib/Modal/Modal.tsx',
+  Card:        'packages/ui-design-system/src/lib/Card/Card.tsx',
+  Divider:     'packages/ui-design-system/src/lib/Divider/Divider.tsx',
+  Select:      'packages/ui-design-system/src/lib/Select/Select.tsx',
+  Checkbox:    'packages/ui-design-system/src/lib/Checkbox/Checkbox.tsx',
+  Textarea:    'packages/ui-design-system/src/lib/Textarea/Textarea.tsx',
+  RadioGroup:  'packages/ui-design-system/src/lib/RadioGroup/RadioGroup.tsx',
+  Alert:       'packages/ui-design-system/src/lib/Alert/Alert.tsx',
+  Badge:       'packages/ui-design-system/src/lib/Badge/Badge.tsx',
+  Spinner:     'packages/ui-design-system/src/lib/Spinner/Spinner.tsx',
+  Tabs:        'packages/ui-design-system/src/lib/Tabs/Tabs.tsx',
+  Breadcrumb:  'packages/ui-design-system/src/lib/Breadcrumb/Breadcrumb.tsx',
 };
 
 export const AVAILABLE_COMPONENTS = Object.keys(COMPONENT_MAP);
